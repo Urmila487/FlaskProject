@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.2 (Python 3.7.0 on win32)" generated="20210525 13:45:46.397" rpa="false" schemaversion="2">
+<suite id="s1" name="Login &amp; Register &amp; User">
+<suite id="s1-s1" name="Login" source="C:\Users\rvadi\PycharmProjects\FlaskyMaster\TestCases\login.robot">
+<kw name="Open my Browser" library="Resources1" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<msg timestamp="20210525 13:45:46.755" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:8080/login'.</msg>
+<status status="PASS" starttime="20210525 13:45:46.754" endtime="20210525 13:45:49.653"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210525 13:45:49.654" endtime="20210525 13:45:49.827"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:46.754" endtime="20210525 13:45:49.828"/>
+</kw>
+<test id="s1-s1-t1" name="Login Test Case">
+<kw name="Input User name" library="Resources1">
+<arg>${User}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>username</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210525 13:45:49.915" level="INFO">Element 'username' is displayed.</msg>
+<status status="PASS" starttime="20210525 13:45:49.833" endtime="20210525 13:45:49.915"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20210525 13:45:49.915" level="INFO">Typing text 'Urmila1234567' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20210525 13:45:49.915" endtime="20210525 13:45:50.173"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:49.832" endtime="20210525 13:45:50.174"/>
+</kw>
+<kw name="Input Password" library="Resources1">
+<arg>${Password}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>password</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210525 13:45:50.233" level="INFO">Element 'password' is displayed.</msg>
+<status status="PASS" starttime="20210525 13:45:50.178" endtime="20210525 13:45:50.234"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20210525 13:45:50.235" level="INFO">Typing text 'Urmi@123' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20210525 13:45:50.234" endtime="20210525 13:45:50.452"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:50.175" endtime="20210525 13:45:50.454"/>
+</kw>
+<kw name="Click Login Button" library="Resources1">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://input[@value='Log In']</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20210525 13:45:50.456" level="INFO">Clicking element 'xpath://input[@value='Log In']'.</msg>
+<status status="PASS" starttime="20210525 13:45:50.456" endtime="20210525 13:45:51.507"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:50.454" endtime="20210525 13:45:51.508"/>
+</kw>
+<kw name="UserInformation page should be visible" library="Resources1">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>User Information - Demo App</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20210525 13:45:51.511" endtime="20210525 13:45:51.536"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:51.509" endtime="20210525 13:45:51.536"/>
+</kw>
+<kw name="Click Logout link" library="Resources1">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210525 13:45:51.536" level="INFO">Clicking link 'Log Out'.</msg>
+<status status="PASS" starttime="20210525 13:45:51.536" endtime="20210525 13:45:51.718"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:51.536" endtime="20210525 13:45:51.718"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:49.828" endtime="20210525 13:45:51.720"/>
+</test>
+<kw name="Close Browser" library="Resources1" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210525 13:45:51.726" endtime="20210525 13:45:54.266"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:51.725" endtime="20210525 13:45:54.266"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:46.441" endtime="20210525 13:45:54.266"/>
+</suite>
+<suite id="s1-s2" name="Register" source="C:\Users\rvadi\PycharmProjects\FlaskyMaster\TestCases\register.robot">
+<kw name="Open my Browser" library="Resources1" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<msg timestamp="20210525 13:45:54.288" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:8080/login'.</msg>
+<status status="PASS" starttime="20210525 13:45:54.287" endtime="20210525 13:45:56.672"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210525 13:45:56.673" endtime="20210525 13:45:56.859"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:54.286" endtime="20210525 13:45:56.859"/>
+</kw>
+<test id="s1-s2-t1" name="Register Test case">
+<kw name="Open Register page" library="Resources1">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Register</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210525 13:45:56.865" level="INFO">Clicking link 'Register'.</msg>
+<status status="PASS" starttime="20210525 13:45:56.864" endtime="20210525 13:45:57.098"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:56.862" endtime="20210525 13:45:57.098"/>
+</kw>
+<kw name="Input User name" library="Resources1">
+<arg>${User}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>username</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210525 13:45:57.170" level="INFO">Element 'username' is displayed.</msg>
+<status status="PASS" starttime="20210525 13:45:57.101" endtime="20210525 13:45:57.171"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20210525 13:45:57.171" level="INFO">Typing text 'Urmila1234567' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20210525 13:45:57.171" endtime="20210525 13:45:57.497"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:57.100" endtime="20210525 13:45:57.498"/>
+</kw>
+<kw name="Input Password" library="Resources1">
+<arg>${Password}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>password</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210525 13:45:57.571" level="INFO">Element 'password' is displayed.</msg>
+<status status="PASS" starttime="20210525 13:45:57.500" endtime="20210525 13:45:57.571"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20210525 13:45:57.572" level="INFO">Typing text 'Urmi@123' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20210525 13:45:57.571" endtime="20210525 13:45:57.829"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:57.499" endtime="20210525 13:45:57.829"/>
+</kw>
+<kw name="Input Firstname" library="Resources1">
+<arg>${Firstname}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>firstname</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210525 13:45:57.880" level="INFO">Element 'firstname' is displayed.</msg>
+<status status="PASS" starttime="20210525 13:45:57.832" endtime="20210525 13:45:57.880"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20210525 13:45:57.881" level="INFO">Typing text 'Urmila' into text field 'name:firstname'.</msg>
+<status status="PASS" starttime="20210525 13:45:57.880" endtime="20210525 13:45:58.084"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:57.830" endtime="20210525 13:45:58.084"/>
+</kw>
+<kw name="Input Lastname" library="Resources1">
+<arg>${Lastname}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>lastname</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210525 13:45:58.139" level="INFO">Element 'lastname' is displayed.</msg>
+<status status="PASS" starttime="20210525 13:45:58.088" endtime="20210525 13:45:58.139"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20210525 13:45:58.139" level="INFO">Typing text 'Vadi' into text field 'name:lastname'.</msg>
+<status status="PASS" starttime="20210525 13:45:58.139" endtime="20210525 13:45:58.327"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:58.087" endtime="20210525 13:45:58.327"/>
+</kw>
+<kw name="Input Phonenumber" library="Resources1">
+<arg>${Phonenumber}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>phone</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210525 13:45:58.376" level="INFO">Element 'phone' is displayed.</msg>
+<status status="PASS" starttime="20210525 13:45:58.331" endtime="20210525 13:45:58.377"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:phone</arg>
+<arg>${phonenumber}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20210525 13:45:58.378" level="INFO">Typing text '408329191' into text field 'name:phone'.</msg>
+<status status="PASS" starttime="20210525 13:45:58.377" endtime="20210525 13:45:58.568"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:58.330" endtime="20210525 13:45:58.569"/>
+</kw>
+<kw name="Click Register Button" library="Resources1">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://input[@value='Register']</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20210525 13:45:58.571" level="INFO">Clicking element 'xpath://input[@value='Register']'.</msg>
+<status status="PASS" starttime="20210525 13:45:58.571" endtime="20210525 13:45:58.761"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:58.570" endtime="20210525 13:45:58.762"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:56.860" endtime="20210525 13:45:58.763"/>
+</test>
+<kw name="Close Browser" library="Resources1" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210525 13:45:58.769" endtime="20210525 13:46:01.234"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:58.768" endtime="20210525 13:46:01.234"/>
+</kw>
+<status status="PASS" starttime="20210525 13:45:54.271" endtime="20210525 13:46:01.234"/>
+</suite>
+<suite id="s1-s3" name="User" source="C:\Users\rvadi\PycharmProjects\FlaskyMaster\TestCases\user.robot">
+<kw name="Open my Browser" library="Resources1" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<msg timestamp="20210525 13:46:01.259" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:8080/login'.</msg>
+<status status="PASS" starttime="20210525 13:46:01.258" endtime="20210525 13:46:03.899"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210525 13:46:03.899" endtime="20210525 13:46:04.048"/>
+</kw>
+<status status="PASS" starttime="20210525 13:46:01.257" endtime="20210525 13:46:04.049"/>
+</kw>
+<test id="s1-s3-t1" name="UserInformation Test case">
+<kw name="Input User name" library="Resources1">
+<arg>${User}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>username</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210525 13:46:04.135" level="INFO">Element 'username' is displayed.</msg>
+<status status="PASS" starttime="20210525 13:46:04.050" endtime="20210525 13:46:04.136"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20210525 13:46:04.136" level="INFO">Typing text 'Urmila1234567' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20210525 13:46:04.136" endtime="20210525 13:46:04.382"/>
+</kw>
+<status status="PASS" starttime="20210525 13:46:04.050" endtime="20210525 13:46:04.383"/>
+</kw>
+<kw name="Input Password" library="Resources1">
+<arg>${Password}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>password</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210525 13:46:04.455" level="INFO">Element 'password' is displayed.</msg>
+<status status="PASS" starttime="20210525 13:46:04.386" endtime="20210525 13:46:04.455"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20210525 13:46:04.456" level="INFO">Typing text 'Urmi@123' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20210525 13:46:04.455" endtime="20210525 13:46:04.685"/>
+</kw>
+<status status="PASS" starttime="20210525 13:46:04.384" endtime="20210525 13:46:04.686"/>
+</kw>
+<kw name="Click Login Button" library="Resources1">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://input[@value='Log In']</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20210525 13:46:04.691" level="INFO">Clicking element 'xpath://input[@value='Log In']'.</msg>
+<status status="PASS" starttime="20210525 13:46:04.690" endtime="20210525 13:46:05.723"/>
+</kw>
+<status status="PASS" starttime="20210525 13:46:04.686" endtime="20210525 13:46:05.727"/>
+</kw>
+<kw name="UserInformation page should be visible" library="Resources1">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>User Information - Demo App</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20210525 13:46:05.729" endtime="20210525 13:46:05.758"/>
+</kw>
+<status status="PASS" starttime="20210525 13:46:05.728" endtime="20210525 13:46:05.758"/>
+</kw>
+<kw name="User name should be visible" library="Resources1">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//td[normalize-space()='Username']</arg>
+<arg>Username</arg>
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<msg timestamp="20210525 13:46:05.763" level="INFO">Verifying element '//td[normalize-space()='Username']' contains exact text 'Username'.</msg>
+<status status="PASS" starttime="20210525 13:46:05.762" endtime="20210525 13:46:05.822"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${response}</var>
+<arg>xpath://td[@id='username']</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20210525 13:46:05.869" level="INFO">${response} = Urmila1234567</msg>
+<status status="PASS" starttime="20210525 13:46:05.823" endtime="20210525 13:46:05.869"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>${User}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210525 13:46:05.869" endtime="20210525 13:46:05.869"/>
+</kw>
+<status status="PASS" starttime="20210525 13:46:05.761" endtime="20210525 13:46:05.869"/>
+</kw>
+<kw name="Firstname should be visible" library="Resources1">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//td[normalize-space()='First name']</arg>
+<arg>First name</arg>
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<msg timestamp="20210525 13:46:05.875" level="INFO">Verifying element '//td[normalize-space()='First name']' contains exact text 'First name'.</msg>
+<status status="PASS" starttime="20210525 13:46:05.874" endtime="20210525 13:46:05.922"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${response}</var>
+<arg>xpath://td[@id='firstname']</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20210525 13:46:05.968" level="INFO">${response} = Urmila</msg>
+<status status="PASS" starttime="20210525 13:46:05.922" endtime="20210525 13:46:05.968"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>${Firstname}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210525 13:46:05.968" endtime="20210525 13:46:05.969"/>
+</kw>
+<status status="PASS" starttime="20210525 13:46:05.869" endtime="20210525 13:46:05.969"/>
+</kw>
+<kw name="Lastname should be visible" library="Resources1">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//td[normalize-space()='Last name']</arg>
+<arg>Last name</arg>
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<msg timestamp="20210525 13:46:05.969" level="INFO">Verifying element '//td[normalize-space()='Last name']' contains exact text 'Last name'.</msg>
+<status status="PASS" starttime="20210525 13:46:05.969" endtime="20210525 13:46:06.016"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${response}</var>
+<arg>xpath=//td[@id='lastname']</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20210525 13:46:06.063" level="INFO">${response} = Vadi</msg>
+<status status="PASS" starttime="20210525 13:46:06.016" endtime="20210525 13:46:06.063"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>${Lastname}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210525 13:46:06.063" endtime="20210525 13:46:06.063"/>
+</kw>
+<status status="PASS" starttime="20210525 13:46:05.969" endtime="20210525 13:46:06.063"/>
+</kw>
+<kw name="Phone number should be visible" library="Resources1">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//td[normalize-space()='Phone number']</arg>
+<arg>Phone number</arg>
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<msg timestamp="20210525 13:46:06.063" level="INFO">Verifying element '//td[normalize-space()='Phone number']' contains exact text 'Phone number'.</msg>
+<status status="PASS" starttime="20210525 13:46:06.063" endtime="20210525 13:46:06.115"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${response}</var>
+<arg>xpath=//td[@id='phone']</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20210525 13:46:06.159" level="INFO">${response} = 408329191</msg>
+<status status="PASS" starttime="20210525 13:46:06.115" endtime="20210525 13:46:06.159"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>${Phonenumber}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210525 13:46:06.159" endtime="20210525 13:46:06.159"/>
+</kw>
+<status status="PASS" starttime="20210525 13:46:06.063" endtime="20210525 13:46:06.159"/>
+</kw>
+<kw name="Click Logout link" library="Resources1">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210525 13:46:06.165" level="INFO">Clicking link 'Log Out'.</msg>
+<status status="PASS" starttime="20210525 13:46:06.159" endtime="20210525 13:46:06.359"/>
+</kw>
+<status status="PASS" starttime="20210525 13:46:06.159" endtime="20210525 13:46:06.360"/>
+</kw>
+<status status="PASS" starttime="20210525 13:46:04.049" endtime="20210525 13:46:06.362"/>
+</test>
+<kw name="Close Browser" library="Resources1" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210525 13:46:06.368" endtime="20210525 13:46:08.817"/>
+</kw>
+<status status="PASS" starttime="20210525 13:46:06.367" endtime="20210525 13:46:08.817"/>
+</kw>
+<status status="PASS" starttime="20210525 13:46:01.242" endtime="20210525 13:46:08.817"/>
+</suite>
+<status status="PASS" starttime="20210525 13:45:46.401" endtime="20210525 13:46:08.823"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Login &amp; Register &amp; User">Login &amp; Register &amp; User</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Login">Login &amp; Register &amp; User.Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Register">Login &amp; Register &amp; User.Register</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="User">Login &amp; Register &amp; User.User</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,7 @@
+datasources:5b277e184307d28e35ac1490707e8a306d9c19e8
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:98c1cc8fce6c9523afef9e6aeccd397d127f1551
+--suite Suites.Login
+--suite Suites.Register
+--suite Suites.User
